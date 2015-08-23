@@ -37,3 +37,9 @@ div {
 	background-color: #4444ff;
 	border-color: #000077;
 }
+
+small {
+	font-size: 12pt;
+	padding-left: 24px;
+	color: #dddddd;
+}
