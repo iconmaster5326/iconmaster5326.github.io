@@ -24,6 +24,7 @@ body {
 div {
 	color: #ffffff;
 	font-family: fixedsys, monospace;
+	font-size: 12pt;
 }
 
 .btn-primary {
