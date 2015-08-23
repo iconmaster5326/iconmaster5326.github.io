@@ -23,8 +23,7 @@ body {
 
 div {
 	color: #ffffff;
-	font-family: fixedsys;
-	font-family: monospace;
+	font-family: fixedsys, monospace;
 }
 
 .btn-primary {
