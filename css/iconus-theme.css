@@ -16,6 +16,11 @@
 
 body {
 	background-color: #000099;
+	
+	background-image: url("/img/corner.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+	background-attachment: fixed;
 }
 
 .jumbotron {
