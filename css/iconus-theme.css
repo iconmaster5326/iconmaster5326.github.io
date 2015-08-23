@@ -1,3 +1,38 @@
+@font-face {
+    font-family: fixedsys;
+    src: url(font/FSEX300.ttf);
+}
+
 .btn {
     border-radius: 0px;
+	border-width: 2px;
+	transition: background-color .2s;
+}
+
+.btn:hover {
+	transition: background-color .2s;
+}
+
+body {
+	background-color: #000099;
+}
+
+.jumbotron {
+	background: #0000ff;
+}
+
+div {
+	color: #ffffff;
+	font-family: fixedsys;
+	font-family: monospace;
+}
+
+.btn-primary {
+	background-color: #0000ff;
+	border-color: #000077;
+}
+
+.btn-primary:hover {
+	background-color: #4444ff;
+	border-color: #000077;
 }
