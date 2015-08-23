@@ -7,7 +7,7 @@
     border-radius: 0px;
 	border-width: 2px;
 	transition: background-color .2s;
-	font-size: 12pt;
+	font-size: 16pt;
 }
 
 .btn:hover {
@@ -25,7 +25,7 @@ body {
 div {
 	color: #ffffff;
 	font-family: fixedsys, monospace;
-	font-size: 12pt;
+	font-size: 16pt;
 }
 
 .btn-primary {
