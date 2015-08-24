@@ -1,3 +1,3 @@
 function load_content() {
-	$("#main-content").load("html/test.html");
+	$("#main-content").load("/html/test.html");
 }
