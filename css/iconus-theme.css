@@ -26,6 +26,10 @@ body {
 	background: #0000ff;
 }
 
+.jumbotron h1 {
+	color: #ffffff;
+}
+
 div {
 	color: #ffffff;
 	font-family: fixedsys, monospace;
@@ -122,4 +126,18 @@ a:hover, a:visited:hover {
 a:visited {
 	color: #dddddd;
 	transition: color .2s;
+}
+
+.form-group input[type="text"] {
+	background-color: #0000ff;
+	color: #ffffff;
+	border-radius: 0px;
+	border-width: 2px;
+	border-color: #000077;
+	transition: background-color .2s;
+}
+
+.form-group input[type="text"]:focus {
+	background-color: #4444ff;
+	box-shadow: none;
 }

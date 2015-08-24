@@ -102,7 +102,7 @@ iconus.loadPost = function(url) {
 		var e = $("<div></div>");
 		e.html(data);
 		var panel = $("<div class='panel panel-primary'><div class='panel-heading'></div><div class='panel-body'></div><div class='panel-footer'></div></div>");
-		$("#post-area").html(panel);
+		$("#post-area").append(panel);
 		var title_link = $("<a></a>");
 		title_link.click(function() {
 			iconus.loadPage("/html/post.html", null, function() {

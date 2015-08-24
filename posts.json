@@ -1,6 +1,8 @@
 {
 	"posts":[
 		{
+			"name":"post"
+		},{
 			"name":"test"
 		}
 	]
