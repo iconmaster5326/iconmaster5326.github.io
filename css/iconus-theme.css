@@ -57,6 +57,8 @@ small {
 	
 	padding-bottom: 6px;
 	padding-top: 6px;
+	
+	text-decoration: none;
 }
 
 .nav-pills > li > a:hover {
@@ -104,4 +106,20 @@ small {
 	font-size: 75%;
 	color: #dddddd;
 	padding: 4px;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: underline;
+	transition: color .2s;
+}
+
+a:hover, a:visited:hover {
+	color: #000077;
+	transition: color .2s;
+}
+
+a:visited {
+	color: #dddddd;
+	transition: color .2s;
 }

@@ -4,12 +4,14 @@ $("#main-content").load("/html/index.html");
 
 iconus = {};
 
-iconus.loadPage = function(page) {
+iconus.loadPage = function(page, id, handler) {
 	$(".nav-pills .active").removeClass("active");
-	$("#menu-item-"+page).addClass("active");
+	$("#menu-item-"+id).addClass("active");
 	$("#main-content").fadeOut(100,function() {
-		$("#main-content").load("/html/"+page+".html");
-		$("#main-content").fadeIn(100);
+		$("#main-content").load(page, function() {
+			if (handler) handler();
+			$("#main-content").fadeIn(100);
+		});
 	});
 };
 
@@ -101,7 +103,14 @@ iconus.loadPost = function(url) {
 		e.html(data);
 		var panel = $("<div class='panel panel-primary'><div class='panel-heading'></div><div class='panel-body'></div><div class='panel-footer'></div></div>");
 		$("#post-area").html(panel);
-		panel.find(".panel-heading").html(e.find("title").html());
+		var title_link = $("<a></a>");
+		title_link.click(function() {
+			iconus.loadPage("/html/post.html", null, function() {
+				iconus.loadPost(url);
+			});
+		});
+		panel.find(".panel-heading").html(title_link);
+		panel.find(".panel-heading a").html(e.find("title").html());
 		panel.find(".panel-body").html(e.find("content").html());
 		panel.find(".panel-footer").html("Posted on "+e.find("date").html()+" at "+e.find("time").html()+" by <strong>"+e.find("poster").html()+"</strong>.");
 	});
