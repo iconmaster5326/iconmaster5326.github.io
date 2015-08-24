@@ -1,5 +1,6 @@
 $("#header").load("/html/header.html");
 $("#footer").load("/html/footer.html");
+$("#main-content").load("/html/index.html");
 
 iconus = {};
 
@@ -94,4 +95,14 @@ iconus.urldata = function(options) {
     return urlObj;
 };
 
-$("#main-content").load("/html/index.html");
+iconus.loadPost = function(url) {
+	$.get(url, function(data) {
+		var e = $("<div></div>");
+		e.html(data);
+		var panel = $("<div class='panel panel-primary'><div class='panel-heading'></div><div class='panel-body'></div><div class='panel-footer'></div></div>");
+		$("#post-area").html(panel);
+		panel.find(".panel-heading").html(e.find("title").html());
+		panel.find(".panel-body").html(e.find("content").html());
+		panel.find(".panel-footer").html("Posted on "+e.find("date").html()+" at "+e.find("time").html()+" by <strong>"+e.find("poster").html()+"</strong>.");
+	});
+};
