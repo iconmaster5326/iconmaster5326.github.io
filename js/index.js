@@ -1,7 +1,7 @@
-function load_content() {
-	$("#main-content").load("/html/test.html");
-}
-
 $(document).ready(function() {
-	iconus.loadPost("/html/test.html");
+	iconus.getAllPosts(function(posts) {
+		for (var post in posts) {
+			iconus.loadPost(iconus.getPostUrl(posts[post]));
+		}
+	});
 });

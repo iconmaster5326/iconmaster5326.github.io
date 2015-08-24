@@ -115,3 +115,19 @@ iconus.loadPost = function(url) {
 		panel.find(".panel-footer").html("Posted on "+e.find("date").html()+" at "+e.find("time").html()+" by <strong>"+e.find("poster").html()+"</strong>.");
 	});
 };
+
+var postsJson;
+iconus.getAllPosts = function(callback) {
+	if (!postsJson) {
+		$.get("/posts.json", function(data) {
+			postsJson = data;
+			if (callback) callback(postsJson.posts);
+		});
+	} else {
+		if (callback) callback(postsJson.posts);
+	}
+};
+
+iconus.getPostUrl = function(postJson) {
+	return "/html/posts/"+postJson.name+".html";
+}
