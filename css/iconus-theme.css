@@ -124,7 +124,7 @@ a {
 }
 
 a:hover, a:visited:hover {
-	color: #000077;
+	color: #000000;
 	transition: color .2s;
 }
 
