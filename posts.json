@@ -1,6 +1,8 @@
 {
 	"posts":[
 		{
+			"name":"readmore"
+		},{
 			"name":"post"
 		},{
 			"name":"test"

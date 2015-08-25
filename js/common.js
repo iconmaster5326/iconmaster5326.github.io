@@ -97,7 +97,7 @@ iconus.urldata = function(options) {
     return urlObj;
 };
 
-iconus.loadPost = function(url) {
+iconus.loadPost = function(url, readmore) {
 	$.get(url, function(data) {
 		var e = $("<div></div>");
 		e.html(data);
@@ -106,12 +106,27 @@ iconus.loadPost = function(url) {
 		var title_link = $("<a></a>");
 		title_link.click(function() {
 			iconus.loadPage("/html/post.html", null, function() {
-				iconus.loadPost(url);
+				iconus.loadPost(url, false);
 			});
 		});
 		panel.find(".panel-heading").html(title_link);
 		panel.find(".panel-heading a").html(e.find("title").html());
 		panel.find(".panel-body").html(e.find("content").html());
+		
+		if (!(e.find("readmore").length === 0)) {
+			if (readmore) {
+				panel.find(".panel-body").append("<br/><br/><a id='readmore'>Read More...</a>");
+				panel.find("#readmore").click(function() {
+					iconus.loadPage("/html/post.html", null, function() {
+						iconus.loadPost(url, false);
+					});
+				});
+			} else {
+				panel.find(".panel-body").append("<br/><br/>");
+				panel.find(".panel-body").append(e.find("readmore").html());
+			}
+		}
+		
 		panel.find(".panel-footer").html("Posted on "+e.find("date").html()+" at "+e.find("time").html()+" by <strong>"+e.find("poster").html()+"</strong>.");
 	});
 };
