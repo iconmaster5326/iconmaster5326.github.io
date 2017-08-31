@@ -10,6 +10,8 @@ Hello! This is a test post, with cool test stuff in it!
 
 Like [links to pages](http://www/google.com), for instance!
 
+<!--readmore-->
+
 {% highlight java %}
 And code as well!
 {% endhighlight %}

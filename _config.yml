@@ -18,3 +18,5 @@ plugins:
 
 disqus:
   shortname: iconmaster
+  
+excerpt_separator: <!--readmore-->
