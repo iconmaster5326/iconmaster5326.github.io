@@ -1,1 +1,19 @@
-theme: jekyll-theme-minimal
+title: Iconmaster's Blog
+email: iconmaster@csh.rit.edu
+description: >
+  Hello! This is the blog for Joshua Robbins (more commonly known as Iconmaster on the Internet).
+  On this site, I'll post new about my projects, my insigts into computer science, and probably stuff about
+  video games, too. More coming soon!
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://iconmaster.info"
+twitter_username: iconmaster5326
+github_username:  iconmaster5326
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+disqus:
+  shortname: iconmaster
