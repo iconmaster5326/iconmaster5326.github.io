@@ -1,3 +1,7 @@
-_site
+# HTML gubbins
+/_site/
 .sass-cache
 .jekyll-metadata
+
+# Eclipse nonsense
+/.project
