@@ -1,10 +1,9 @@
-title: Iconmaster's Blog
+title: iconmaster.info
 email: iconmaster@csh.rit.edu
 author: Joshua Robbins
 description: >
-  This is the blog for Joshua Robbins (more commonly known as Iconmaster on the Internet).
-  On this site, I'll post new about my projects, my insigts into computer science, and probably stuff about
-  video games, too. More coming soon!
+  This is the blog for Joshua Robbins, aka Iconmaster.
+  I post about my new projects, my insights into computer science, and probably stuff about video games, too.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iconmaster.info"
