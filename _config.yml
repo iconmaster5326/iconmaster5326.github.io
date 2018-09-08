@@ -2,8 +2,7 @@ title: iconmaster.info
 email: iconmaster@csh.rit.edu
 author: Joshua Robbins
 description: >
-  This is the blog for Joshua Robbins, aka Iconmaster.
-  I post about my new projects, my insights into computer science, and probably stuff about video games, too.
+  A Dragon's Musings
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iconmaster.info"
